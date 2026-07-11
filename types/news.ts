@@ -1,8 +1,8 @@
 export interface NewsArticle{
-    title: string;
+    headline: string;
     summary: string;
-    banner_image: string;
+    image: string;
     source: string;
-    time_published: string;
+    datetime: number;
     url: string;
 }

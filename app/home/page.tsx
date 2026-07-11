@@ -19,11 +19,11 @@ export default async function Home(){
             {news.map((article: NewsArticle) => (
                 <NewsCard
                 key={article.url}
-                title={article.title}
+                title={article.headline}
                 description={article.summary}
-                image={article.banner_image}
+                image={article.image}
                 source={article.source}
-                publishedAt={article.time_published}
+                publishedAt={article.datetime}
                 url={article.url}
                 />
             ))}

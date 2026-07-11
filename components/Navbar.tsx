@@ -8,7 +8,7 @@ const Navbar = () => {
         <Link href="/home" className="flex items-center gap-2">
           <BarChart3 className="h-7 w-7 text-blue-600" />
           <span className="text-xl font-bold tracking-tight text-gray-900">
-            MarketMind AI
+            investIQ.ai
           </span>
         </Link>
         

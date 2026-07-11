@@ -1,9 +1,10 @@
+import Image from 'next/image'
 type NewsCardProps = {
   title: string;
   description: string;
   image: string;
   source: string;
-  publishedAt: string;
+  publishedAt: number;
   url: string;
 };
 const NewsCard=({title,description,image,source,publishedAt,url,}:NewsCardProps)=>{
@@ -12,9 +13,11 @@ const NewsCard=({title,description,image,source,publishedAt,url,}:NewsCardProps)
         <div className="flex flex-col md:flex-row">
 
             <div className="md:w-1/3">
-            <img
+            <Image
                 src={image}
                 alt={title}
+                width={600}
+                height={400}
                 className="h-56 w-full object-cover md:h-full"
             />
             </div>

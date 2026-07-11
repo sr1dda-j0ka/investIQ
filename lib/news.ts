@@ -1,8 +1,8 @@
-const API_KEY=process.env.ALPHA_VANTAGE_API_KEY
+const API_KEY=process.env.FINNHUB_API_KEY
 
 export async function getLatestNews(){
     const res=await fetch(
-        `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&apikey=${API_KEY}`,
+        `https://finnhub.io/api/v1/news?category=biz&token=${API_KEY}`,
         {
             next: {revalidate: 300}
         }
@@ -13,5 +13,5 @@ export async function getLatestNews(){
     }
 
     const data=await res.json();
-    return data.feed.slice(0,8)
+    return data.slice(0,8);
 }
